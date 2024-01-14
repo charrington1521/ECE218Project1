@@ -38,7 +38,6 @@ DigitalOut ignitionLED(LED2); /**< Object associated with sucessful igntion*/
 DigitalOut occupantsReadyLED(LED1); /**< Object associated with all junion learner permit conditions being met*/
 
 DigitalInOut ignitionErrorBuzzer(PE_10); /**< Object associated with unsucessfule ignition*/
-//DigitalIn mq2(PE_12);
 
 UnbufferedSerial uartUsb(USBTX, USBRX, 115200); /**< Object associated with the uart process*/
 
@@ -84,8 +83,6 @@ Prints out an error message for each unfulfilled junior learner permit ignition
 coniditon. 
 */
 
-//void uartTask();
-
 //=====[Main function, the program entry point after power on or reset]========
 
 /**
@@ -103,7 +100,6 @@ int main()
         if (ignitionAttempts < 1) {
             conditionsUpdate();
             ignitionUpdate();
-            //uartTask();
         }
     }
 }
